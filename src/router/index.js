@@ -7,15 +7,10 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      redirect: {name: 'token-login'},
+      redirect: {name: 'credentials-login'},
       name: 'auth',
       component: AuthView,
       children: [
-        {
-          path: '/login/token',
-          name: 'token-login',
-          component: () => import('../components/auth/TokenLoginComponent.vue')
-        },
         {
           path: '/login/credentials',
           name: 'credentials-login',

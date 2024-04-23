@@ -1,0 +1,16 @@
+.form {
+  .el-form-item__label {
+    font-weight: bold;
+    font-size: 0.8rem !important;
+    margin-bottom: 0 !important;
+  }
+
+  &__input {
+    min-height: 2.5rem;
+
+    .el-input__wrapper {
+      box-shadow: none;
+      border-radius: 0.4rem;
+    }
+  }
+}
