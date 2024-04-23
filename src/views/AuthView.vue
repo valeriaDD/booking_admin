@@ -11,7 +11,7 @@
     <img src="@/assets/images/girl.png" alt="image" class="image"/>
     <div class="info">
       <h3>Mange bookings efficiently!</h3>
-      <h4>Fast booking API solution for your project</h4>
+      <h4>Fast Booking API solution for your project</h4>
     </div>
   </div>
 </div>
@@ -37,13 +37,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 2rem 2rem 2rem 7rem;
+    border-radius: 0.5rem 0.5rem 0.5rem 5rem;
     margin-right: 5vh;
     background: $--color-light-green;
 
     .image {
       margin: auto;
-      width: 50%;
+      width: 60%;
     }
 
     .info {
@@ -56,6 +56,7 @@
       }
 
       h4 {
+        margin-top: 0.5rem;
         text-align: center;
       }
     }

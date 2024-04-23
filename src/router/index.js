@@ -12,9 +12,14 @@ const router = createRouter({
       component: AuthView,
       children: [
         {
-          path: '/login/credentials',
+          path: '/login',
           name: 'credentials-login',
           component: () => import('../components/auth/CredentialsLoginComponent.vue')
+        },
+        {
+          path: '/register',
+          name: 'register',
+          component: () => import('../components/auth/RegisterComponent.vue')
         },
       ],
     },

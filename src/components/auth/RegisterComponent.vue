@@ -5,23 +5,23 @@
 <template>
   <div class="login_form">
     <div class="header">
-      <h3 class="header__title">Welcome back!</h3>
-      <h4 class="header__subtitle">Please enter credentials to continue</h4>
+      <h3 class="header__title">Hi, nice to meet you!</h3>
+      <h4 class="header__subtitle">Please fill the form to get it started</h4>
     </div>
 
     <el-form class="form" label-position="top">
       <el-form-item>
-        <el-input class="form__input" placeholder="Client id"></el-input>
+        <el-input class="form__input" placeholder="Company name"></el-input>
       </el-form-item>
       <el-form-item>
-        <el-input class="form__input" placeholder="Client secret"></el-input>
+        <el-input class="form__input" placeholder="Company email"></el-input>
       </el-form-item>
       <el-button class="form__action"> Sign in</el-button>
     </el-form>
 
 
     <div class="footer">
-      Dont have an account? <a class="footer__link" @click="$router.push({name: 'register'})">Sign Up</a>
+      Already have an account? <a class="footer__link" @click="$router.push({name: 'credentials-login'})">Sign In</a>
     </div>
   </div>
 </template>
