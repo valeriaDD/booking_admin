@@ -1,23 +1,64 @@
-<script setup>
-
-</script>
-
 <template>
-<div class="header">
-  <div class="header__options">
-    <ul class="list">
-      <li class="list__item list__item--selected"><i class="icon-calendar"/>Calendar</li>
-      <li class="list__item"><i class="icon-users" />Users</li>
-      <li class="list__item"><i class="icon-database"/>Resource</li>
-      <li class="list__item"><i class="icon-book-open"/>Docs</li>
-    </ul>
+  <div class="header">
+    <div class="header__options">
+      <ul class="list">
+        <li v-for="menuItem in menuItems"
+            :key="menuItem.name"
+            @click="redirect(menuItem.routeName)"
+            class="list__item"
+            :class="{'list__item--selected': menuItem.routeName === defaultRouteName}"
+        >
+          <i :class="menuItem.iconClass" /> {{ menuItem.name }}
+        </li>
+      </ul>
+    </div>
+    <div class="header__avatar">
+      <el-avatar></el-avatar>
+      <i class="icon icon-more-vertical" />
+    </div>
   </div>
-  <div class="header__avatar">
-    <el-avatar></el-avatar>
-    <i class="icon icon-more-vertical"/>
-  </div>
-</div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      menuItems: [
+        {
+          routeName: 'calendar',
+          name: 'Calendar',
+          iconClass: 'icon-calendar'
+        },
+        {
+          routeName: 'users',
+          name: 'Users',
+          iconClass: 'icon-users'
+        },
+        {
+          routeName: 'resources',
+          name: 'Resources',
+          iconClass: 'icon-database'
+        },
+        {
+          routeName: 'docs',
+          name: 'Docs',
+          iconClass: 'icon-book-open'
+        }
+      ]
+    }
+  },
+  computed: {
+    defaultRouteName() {
+      return this.$route.name
+    }
+  },
+  methods: {
+    redirect(routeName) {
+      this.$router.push({ name: routeName })
+    }
+  }
+}
+</script>
 
 <style scoped lang="scss">
 .header {

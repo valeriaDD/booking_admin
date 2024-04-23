@@ -34,16 +34,23 @@ const router = createRouter({
           name: 'calendar',
           component: () => import('../components/calendar/CalendarComponent.vue')
         },
+        {
+          path: '/users',
+          name: 'users',
+          component: () => import('../components/users/UsersComponent.vue')
+        },
+        {
+          path: '/resources',
+          name: 'resources',
+          component: () => import('../components/resources/ResourcesComponent.vue')
+        },
+        {
+          path: '/docs',
+          name: 'docs',
+          component: () => import('../components/docs/DocsComponent.vue')
+        },
       ],
     },
-    {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue')
-    }
   ]
 })
 
