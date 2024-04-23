@@ -3,9 +3,9 @@
 </script>
 
 <template>
-<div> Calendar goes here </div>
+
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 
 </style>
