@@ -121,10 +121,10 @@ export default {
       width: 100%;
       font-weight: bold;
       margin-bottom: 2.5rem;
-      background: $--color-warning;
+      background: $--color-light-green;
       color: $--color-white;
       padding: 0.8rem;
-      border: 1px solid $--color-warning;
+      transition: all 0.3s ease-in-out;
 
       i {
         margin-right: 0.8rem;
@@ -136,9 +136,7 @@ export default {
       }
 
       &:hover {
-        background: $--color-white;
-        color: $--color-warning;
-        border: 1px solid $--color-warning;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.15);
       }
     }
 

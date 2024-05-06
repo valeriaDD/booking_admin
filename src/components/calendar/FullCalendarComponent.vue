@@ -27,6 +27,7 @@ export default {
           month: "long",
           year: "numeric",
         },
+        height: '100%',
       }
     }
   },
