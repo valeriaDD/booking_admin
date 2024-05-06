@@ -6,12 +6,34 @@
   }
 
   &__input {
-    min-height: 3.5rem;
+    min-height: 3rem;
     font-size: 1rem;
 
     .el-input__wrapper {
       box-shadow: none;
       border-radius: 0.4rem;
     }
+  }
+}
+
+.input {
+  min-height: 3rem;
+  font-size: 1rem;
+
+  .el-input__wrapper {
+    border-radius: 0.4rem;
+  }
+}
+
+.input--radio {
+  .el-radio-button__inner {
+    padding: 0.95rem;
+  }
+}
+
+.input--select {
+  .el-select__wrapper {
+    min-height: 3rem;
+    font-size: 1rem;
   }
 }
