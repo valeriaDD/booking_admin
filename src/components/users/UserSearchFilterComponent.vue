@@ -16,7 +16,7 @@
       multiple
       clearable
       filterable
-      placeholder="Select"
+      placeholder="Search by tag"
       class="searcher__item input--select flex-1"
     >
       <el-option
@@ -87,13 +87,5 @@ export default {
   &__item {
     font-size: 1rem;
   }
-}
-
-.flex-1 {
-  flex: 1;
-}
-
-.flex-2 {
-  flex: 2;
 }
 </style>

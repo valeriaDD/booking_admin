@@ -1,5 +1,5 @@
 <template>
-  <div class="list">
+  <div class="table-list">
     <div class="header">
       <div class="header__item flex-2">Name</div>
       <div class="header__item flex-1">Type</div>
@@ -26,37 +26,3 @@ export default {
   components: { UserItem }
 }
 </script>
-
-<style scoped lang="scss">
-.header {
-  display: flex;
-  align-items: center;
-  text-align: start;
-  padding-bottom: 0.5rem;
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: $--color-gray;
-  border-bottom: 1px solid $--color-light-gray;
-
-  &__item--actions {
-    text-align: end;
-    width: 8rem;
-  }
-}
-
-.content {
-  margin-top: 1rem;
-
-  &__item {
-    margin-bottom: 0.5rem;
-  }
-}
-
-.flex-1 {
-  flex: 1;
-}
-
-.flex-2 {
-  flex: 2;
-}
-</style>
