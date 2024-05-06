@@ -1,5 +1,6 @@
 <template>
   <div class="sidebar">
+    <add-booking></add-booking>
     <el-menu
       class="sidebar__menu"
       :router="true"
@@ -11,7 +12,7 @@
         </router-link>
       </div>
 
-      <el-button class="button book-button">
+      <el-button class="button book-button" @click="openAddBookingForm">
         <i class="icon-plus-circle"/> <span>Add booking </span>
       </el-button>
 
@@ -49,11 +50,14 @@
 
 <script>
 import Avatar from '@/components/common/AvatarComponent.vue'
+import { useBookingStore } from '@/store/booking.store.js'
+import AddBooking from '@/components/calendar/AddBookingComponent.vue'
 
 export default {
-  components: { Avatar },
+  components: { AddBooking, Avatar },
   data() {
     return {
+      bookingStore: useBookingStore(),
       menuItems: [
         {
           routeName: 'calendar',
@@ -78,6 +82,11 @@ export default {
       return this.$route.name
     }
   },
+  methods: {
+    openAddBookingForm() {
+      this.bookingStore.setVisibility(true);
+    }
+  }
 }
 </script>
 <style lang="scss" scoped>
@@ -118,6 +127,7 @@ export default {
     }
 
     .button {
+      height: 2.5rem;
       width: 100%;
       font-weight: bold;
       margin-bottom: 2.5rem;

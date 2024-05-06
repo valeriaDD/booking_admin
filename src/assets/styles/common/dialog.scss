@@ -1,0 +1,42 @@
+.dialog {
+  border-radius: 0.4rem;
+  padding: 1.5rem;
+
+  .el-dialog__header {
+    .el-dialog__title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: $--color-indigo;
+    }
+
+    .el-dialog__headerbtn {
+      transition: all 250ms ease-in;
+      border-radius: 0.4rem;
+      top: 1rem;
+      right: 1rem;
+      width: 36px;
+      height: 36px;
+
+      i {
+        font-size: 1.5rem;
+        color: $--color-indigo;
+      }
+
+      &:hover {
+        transition: all 250ms ease-in;
+        background: $--color-info;
+      }
+    }
+  }
+
+  .button {
+    max-width: 8rem;
+    min-width: 4rem;
+    padding: 1.25rem;
+  }
+
+  .button--confirm {
+    background: $--color-indigo;
+    color: $--color-white;
+  }
+}
