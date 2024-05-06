@@ -51,7 +51,7 @@
 <script>
 import Avatar from '@/components/common/AvatarComponent.vue'
 import { useBookingStore } from '@/store/booking.store.js'
-import AddBooking from '@/components/calendar/AddBookingComponent.vue'
+import AddBooking from '@/components/calendar/booking/AddBookingComponent.vue'
 
 export default {
   components: { AddBooking, Avatar },

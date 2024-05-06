@@ -3,6 +3,8 @@
   padding: 1.5rem;
 
   .el-dialog__header {
+    margin-bottom: 1rem;
+
     .el-dialog__title {
       font-size: 1.5rem;
       font-weight: bold;
@@ -27,6 +29,10 @@
         background: $--color-info;
       }
     }
+  }
+
+  .el-dialog__body {
+    height: 45vh;
   }
 
   .button {
