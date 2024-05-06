@@ -6,6 +6,18 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
+.flex-1 {
+  flex: 1;
+}
+
+.flex-2 {
+  flex: 2;
+}
+
+.flex-3 {
+  flex: 3;
+}
+
 
 @import "form";
 

@@ -1,14 +1,21 @@
 <template>
   <div class="searcher">
-    <el-input placeholder="Search by keywords" type="text" class="searcher__item input flex-2">
+    <el-input
+      placeholder="Search by keywords"
+      v-model="keywords"
+      class="searcher__item input flex-2">
       <template #append>
         <el-button class="button"><i class="icon-search" /></el-button>
       </template>
     </el-input>
 
     <el-select
+      v-model="tags"
       collapse-tags
       collapse-tags-tooltip
+      multiple
+      clearable
+      filterable
       placeholder="Select"
       class="searcher__item input--select flex-1"
     >
@@ -20,11 +27,11 @@
       />
     </el-select>
 
-    <div class="input--radio">
-      <el-radio-group size="large">
-        <el-radio-button label="All" value="All" />
-        <el-radio-button label="Internam" value="Internal" />
-        <el-radio-button label="External" value="External" />
+    <div>
+      <el-radio-group size="large" class="input--radio" v-model="isExternal">
+        <el-radio-button :value="undefined">All</el-radio-button>
+        <el-radio-button :value="true">Internal</el-radio-button>
+        <el-radio-button :value="false">External</el-radio-button>
       </el-radio-group>
     </div>
   </div>
@@ -35,6 +42,9 @@ export default {
   name: 'UserSearchFilter',
   data() {
     return {
+      tags: [],
+      keywords: "",
+      isExternal: undefined,
       options: [
         {
           value: 'Option1',
@@ -65,7 +75,7 @@ export default {
 <style scoped lang="scss">
 .searcher {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
 
   .button {
     i {

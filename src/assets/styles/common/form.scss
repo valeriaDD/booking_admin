@@ -29,11 +29,33 @@
   .el-radio-button__inner {
     padding: 0.95rem;
   }
+
+  .is-active {
+    .el-radio-button__inner {
+      background: $--color-indigo;
+    }
+  }
 }
 
 .input--select {
   .el-select__wrapper {
     min-height: 3rem;
     font-size: 1rem;
+  }
+
+  .el-tag {
+    font-size: 1rem;
+    background: $--color-light-green;
+  }
+
+  .el-icon {
+    font-size: 1.2rem;
+  }
+}
+
+.el-popper {
+  .el-tag {
+    font-size: 1rem;
+    background: $--color-light-green;
   }
 }

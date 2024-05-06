@@ -74,8 +74,6 @@
     }
 
     .fc-day-today {
-      background-color: $--color-light-gray !important;
-
       .fc-col-header-cell-cushion {
         color: $--color-primary;
         font-weight: bold;
@@ -212,6 +210,10 @@
     .fc-scroller {
       padding-right: 0;
     }
+
+    .fc-day-today {
+      background-color: rgba(191, 204, 148, 0.5) !important;
+    }
   }
 
   .fc-view > table {
@@ -250,7 +252,7 @@
     border: none;
 
     .fc-list-empty {
-         background: $--color-info;
+      background: $--color-info;
     }
 
     .fc-list-empty-cushion {

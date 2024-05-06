@@ -7,7 +7,7 @@
     >
       <div class="logo">
         <router-link :to="{ name: 'home' }">
-          <img src="../assets/images/logo.png" height="35px" width="180px" />
+          <img src="../assets/images/logo.png" height="32px" width="180px" />
         </router-link>
       </div>
 
@@ -107,7 +107,7 @@ export default {
     color: $--color-input-field;
 
     .logo {
-      margin-top: 1rem;
+      margin-top: 1.5rem;
       font-size: 2rem;
       font-weight: bold;
       padding-bottom: 2.5rem;
@@ -121,7 +121,7 @@ export default {
       width: 100%;
       font-weight: bold;
       margin-bottom: 2.5rem;
-      background: $--color-light-green;
+      background: $--color-warning;
       color: $--color-white;
       padding: 0.8rem;
       transition: all 0.3s ease-in-out;
@@ -145,7 +145,7 @@ export default {
       padding: 0;
       display: flex;
       flex-direction: column;
-      gap: 1rem;
+      gap: 1.5rem;
 
 
       &__item {
