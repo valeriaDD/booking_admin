@@ -74,6 +74,11 @@ export default {
           name: 'Resources',
           iconClass: 'icon-database'
         },
+        {
+          routeName: 'home',
+          name: 'Statistics',
+          iconClass: 'icon-pie-chart'
+        },
       ]
     }
   },
