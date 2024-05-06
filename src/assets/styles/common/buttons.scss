@@ -1,0 +1,22 @@
+.button {
+  height: unset;
+  border: none;
+  background: $--color-white;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  transition: all 250ms ease-in;
+
+
+  &:hover {
+    transition: all 250ms ease-in;
+    background-color: $--color-light-blue;
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+    color: $--color-blue-gray !important;
+  }
+}

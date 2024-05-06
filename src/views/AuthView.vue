@@ -19,7 +19,7 @@
 
 <style scoped lang="scss">
 .container {
-  background: $--color-powder;
+  background: $--color-info;
   margin: auto;
   display: flex;
   align-items: center;
@@ -29,7 +29,7 @@
   &__card, &__form {
     padding: 1.5rem;
     flex: 1;
-    height: 90vh;
+    height: 85vh;
   }
 
   &__card {
@@ -37,9 +37,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 0.5rem 0.5rem 0.5rem 5rem;
+    border-radius: 0.4rem 0.4rem 0.4rem 8rem;
     margin-right: 5vh;
-    background: $--color-light-green;
+    background: $--color-indigo;
 
     .image {
       margin: auto;
@@ -47,7 +47,7 @@
     }
 
     .info {
-      color: $--color-primary;
+      color: $--color-white;
 
       h3 {
         text-align: center;

@@ -5,7 +5,7 @@
 <template>
   <div class="login_form">
     <div class="header">
-      <h3 class="header__title">Welcome back!</h3>
+      <h3 class="header__title orange">Welcome back!</h3>
       <h4 class="header__subtitle">Please enter credentials to continue</h4>
     </div>
 
@@ -35,7 +35,6 @@
   display: flex;
   flex-direction: column;
   margin: auto;
-  justify-content: space-between;
 
   .header {
     margin-top: 10%;
@@ -49,6 +48,10 @@
       font-size: 1rem;
       font-weight: normal;
       opacity: 0.7;
+    }
+
+    .orange {
+      color: $--color-warning;
     }
   }
 
@@ -68,13 +71,12 @@
       &:hover {
         transition: all 300ms;
         color: $--color-primary;
-        background: $--color-light-green;
+        background: $--color-white;
       }
     }
   }
 
   .footer {
-
     text-align: center;
 
     &__link {

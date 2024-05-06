@@ -5,7 +5,7 @@
 <template>
   <div class="login_form">
     <div class="header">
-      <h3 class="header__title">Hi, nice to meet you!</h3>
+      <h3 class="header__title">Hi,<span class="orange"> nice to meet you!</span></h3>
       <h4 class="header__subtitle">Please fill the form to get it started</h4>
     </div>
 
@@ -35,7 +35,6 @@
   display: flex;
   flex-direction: column;
   margin: auto;
-  justify-content: space-between;
 
   .header {
     margin-top: 10%;
@@ -49,6 +48,10 @@
       font-size: 1rem;
       font-weight: normal;
       opacity: 0.7;
+    }
+
+    .orange {
+      color: $--color-warning;
     }
   }
 
