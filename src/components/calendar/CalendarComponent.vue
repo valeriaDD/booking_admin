@@ -10,9 +10,9 @@ export default defineComponent({
 </script>
 <template>
   <el-container>
-    <el-aside width="300px">
-      <calendar-filter-component />
-    </el-aside>
+    <el-header>
+      <calendar-filter-component/>
+    </el-header>
     <el-main>
       <full-calendar-component/>
     </el-main>

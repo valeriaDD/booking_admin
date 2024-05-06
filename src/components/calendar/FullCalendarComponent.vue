@@ -2,6 +2,8 @@
 import FullCalendar from '@fullcalendar/vue3'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import interactionPlugin from '@fullcalendar/interaction'
+import timeGridPlugin from '@fullcalendar/timegrid'
+import listPlugin from '@fullcalendar/list';
 
 export default {
   components: {
@@ -10,17 +12,33 @@ export default {
   data() {
     return {
       calendarOptions: {
-        plugins: [ dayGridPlugin, interactionPlugin ],
-        initialView: 'dayGridMonth'
+        plugins: [dayGridPlugin, interactionPlugin, timeGridPlugin, listPlugin],
+        initialView: 'timeGridWeek',
+        headerToolbar: {
+          start: 'today prevYear,prev,next,nextYear',
+          center: 'title',
+          end: 'dayGridMonth,timeGridWeek,listWeek'
+        },
+        firstDay: 1,
+        nowIndicator: true,
+        allDaySlot: false,
+        titleFormat: {
+          day: "numeric",
+          month: "long",
+          year: "numeric",
+        },
       }
     }
+  },
+  mounted() {
+    this.calendarApi = this.$refs.fullCalendar.getApi();
   }
 }
 </script>
 
 <template>
-  <div>
-    <FullCalendar :options="calendarOptions" />
+  <div class="booking-calendar">
+    <FullCalendar :options="calendarOptions" ref="fullCalendar" />
   </div>
 </template>
 
