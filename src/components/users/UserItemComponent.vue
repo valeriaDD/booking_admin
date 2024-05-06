@@ -39,7 +39,7 @@ export default {
 
   &:hover {
     transition: all 250ms;
-    background: $--color-lighter-gray;
+    background: $--color-info;
   }
 
   &__name {
@@ -77,6 +77,7 @@ export default {
     width: 8rem;
 
     .button {
+      display: inline;
       transition: all 250ms;
       padding: 0.5rem;
       border: none;
