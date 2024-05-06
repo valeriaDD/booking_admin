@@ -8,6 +8,42 @@
     }
   }
 
+  .fc-toolbar-title {
+    color: $--color-indigo;
+  }
+
+  .fc-button {
+    min-height: 3rem;
+    border: 2px solid $--color-light-gray;
+    color: $--color-gray;
+    opacity: 0.8;
+    background: transparent;
+    transition: all 250ms ease-in;
+
+    &:hover {
+      opacity: 1;
+      color: $--color-indigo;
+      background: transparent;
+      border: 2px solid $--color-light-gray;
+    }
+
+    &.fc-button-active {
+      opacity: 1;
+      transition: all 250ms ease-in;
+      color: $--color-white;
+      border: 1px solid $--color-indigo;
+      background: $--color-indigo !important;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      border: 2px solid $--color-light-gray;
+      background: transparent;
+      color: $--color-input-field;
+      opacity: 0.5;
+    }
+  }
+
   .fc-view {
     .fc-col-header {
       width: 100% !important;
